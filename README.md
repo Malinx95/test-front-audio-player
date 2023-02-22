@@ -1,38 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pianity Frontend Dev Interview
 
-## Getting Started
+## Goal
 
-First, run the development server:
+Your task is to implement an audio player in order to stream the songs present in the app. There are two buttons already implemented in the app which need to play/pause the audio. Feel free to get inspiration from the Pianity website.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+You are free to implement this component as you see fit as long as you respect the following rules.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rules
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. You must respect all eslint rules (you can run `yarn lint` to check)
+2. You must respect prettier formatting (you can run `yarn prettier` to check)
+3. The audio player must never be interrupted when switching pages.
+4. The audio player must display the current time of the song in real time (e.g. 0:40/2:30).
+5. The audio player must display the title + artist of the song.
+6. The text in the button of the song currently playing must display "play" or "pause" accordingly.  
+   i.e. If the song "Tanqueta" is playing, the button on the "Tanqueta" card on the home page AND the button on the "Tanqueta" page (/song/[id]) must be a "pause" button.
+7. There must be a play/pause button on the audio player itself.
+8. The audio player should be able to be played from anywhere in the app.
+9. Clicking a card's play button from the home page should **not** redirect you to the song's page.
+10. You should be able to explain all your decisions.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+If you have any questions or concerns, you can reach out to me: [felix@pianity.com](mailto:felix@pianity.com)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Good luck!
