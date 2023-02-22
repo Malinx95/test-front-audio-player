@@ -11,14 +11,15 @@ You are free to implement this component as you see fit as long as you respect t
 1. You must respect all eslint rules (you can run `yarn lint` to check)
 2. You must respect prettier formatting (you can run `yarn prettier` to check)
 3. The audio player must never be interrupted when switching pages.
-4. The audio player must display the current time of the song in real time (e.g. 0:40/2:30).
-5. The audio player must display the title + artist of the song.
-6. The text in the button of the song currently playing must display "play" or "pause" accordingly.  
+4. The audio player must always be visible when a song is playing or paused.
+5. The audio player must display the current time of the song in real time (e.g. 0:40/2:30).
+6. The audio player must display the title + artist of the song.
+7. The text in the button of the song currently playing must display "play" or "pause" accordingly.  
    i.e. If the song "Tanqueta" is playing, the button on the "Tanqueta" card on the home page AND the button on the "Tanqueta" page (/song/[id]) must be a "pause" button.
-7. There must be a play/pause button on the audio player itself.
-8. The audio player should be able to be played from anywhere in the app.
-9. Clicking a card's play button from the home page should **not** redirect you to the song's page.
-10. You should be able to explain all your decisions.
+8. There must be a play/pause button on the audio player itself.
+9. The audio player should be able to be played from anywhere in the app.
+10. Clicking a card's play button from the home page should **not** redirect you to the song's page.
+11. You should be able to explain all your decisions.
 
 If you have any questions or concerns, you can reach out to me: [felix@pianity.com](mailto:felix@pianity.com)
 
