@@ -4,19 +4,22 @@ import Head from "next/head";
 
 import { Song } from "@/utils/types";
 import { SONG_DATA } from "@/utils/constants";
+import { useCurrentSong } from "@/context/SongContext";
 
 type Props = {
   song: Song;
 };
 
 export default function SongPage({ song }: Props) {
+  const { setCurrentSong, currentSong, setIsPlaying, isPlaying } =
+    useCurrentSong();
   return (
     <>
       <Head>
         <title>Song Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className="w-screen h-screen bg-slate-800 flex items-center justify-center">
+      <main className="h-screen bg-slate-800 flex items-center justify-center">
         <Link
           href="/"
           className="text-xl text-white font-bold underline absolute top-10 left-10"
@@ -25,9 +28,19 @@ export default function SongPage({ song }: Props) {
         </Link>
 
         <div className="p-10 bg-white text-white bg-opacity-20 flex rounded-xl">
-          <button className="bg-white rounded-full w-20 h-20 mr-8 hover:bg-purple-100">
+          <button
+            className="bg-white rounded-full w-20 h-20 mr-8 hover:bg-purple-100"
+            onClick={() => {
+              if (currentSong?.id === song.id) {
+                setIsPlaying(!isPlaying);
+              } else {
+                setCurrentSong(song);
+                setIsPlaying(true);
+              }
+            }}
+          >
             <span className="text-purple-600 font-bold tracking-tighter">
-              PLAY
+              {isPlaying && currentSong?.id === song.id ? "PAUSE" : "PLAY"}
             </span>
           </button>
           <div className="flex flex-col">

@@ -14,7 +14,7 @@ export default function Home() {
         <title>Pianity Frontend Test</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className="w-screen min-h-screen bg-slate-800 flex flex-col items-center py-40">
+      <main className="grow flex flex-col items-center py-40 mb-52 ">
         <div className="container flex flex-col">
           <h1 className="text-5xl font-medium text-white mb-10">All songs</h1>
 
