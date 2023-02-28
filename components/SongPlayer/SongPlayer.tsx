@@ -53,7 +53,6 @@ function SongPlayer() {
       </div>
       <input
         type="range"
-        defaultValue={0}
         value={Math.floor(currentTime)}
         min={0}
         max={Math.floor(duration)}
