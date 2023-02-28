@@ -14,7 +14,7 @@ function SongPlayer() {
       audioRef.current.play();
       setIsPlaying(true);
     }
-  }, [currentSong]);
+  }, [currentSong, setIsPlaying]);
 
   useEffect(() => {
     if (audioRef.current) {
